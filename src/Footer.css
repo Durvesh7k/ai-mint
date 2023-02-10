@@ -1,0 +1,20 @@
+.footer__container{
+    display: grid;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.footer__text{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__container{
+        font-size:16px
+    }
+    
+}

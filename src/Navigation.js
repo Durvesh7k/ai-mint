@@ -1,4 +1,5 @@
 import { ethers } from 'ethers';
+import "./Navigation.css"
 
 const Navigation = ({ account, setAccount }) => {
     const connectHandler = async () => {
@@ -8,28 +9,28 @@ const Navigation = ({ account, setAccount }) => {
     }
 
     return (
-        <nav>
-            <div className='nav__brand'>
-                <h1>AI NFT Generator</h1>
+        <div className='navigation__container'>
+            <div>
+                <h1 className='navigation__heading'>AI_Mint</h1>
             </div>
 
             {account ? (
                 <button
+                    className='connect_wallet'
                     type="button"
-                    className='nav__connect'
                 >
                     {account.slice(0, 6) + '...' + account.slice(38, 42)}
                 </button>
             ) : (
                 <button
                     type="button"
-                    className='nav__connect'
+                    className='connect_wallet'
                     onClick={connectHandler}
                 >
-                    Connect
+                    Connect Wallet
                 </button>
             )}
-        </nav>
+        </div>
     );
 }
 

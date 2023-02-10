@@ -1,0 +1,45 @@
+.navigation__container{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 30rem;
+}
+
+h1{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.connect_wallet{
+    width: 14rem;
+    background: F9F54B;
+    font-size: 19px;
+    text-transform: uppercase;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    background: #F9F54B;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation__container
+    {
+        gap: 6rem;
+        margin-left: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1rem;
+    }
+
+    h1{
+        font-size: 22px;
+        margin-top: 3px;
+    }
+
+    .connect_wallet{
+        font-size: 10px;
+        width: 8rem;
+    }
+
+  
+    
+}
