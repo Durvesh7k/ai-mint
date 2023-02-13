@@ -6,7 +6,7 @@ const Footer = () => {
     <div className='footer__container'>
             <p>Created at Mantle mash hackathon with ❤️</p>
         <div className='footer__text'>
-            <p>visit on</p><a href='https://github.com/Durvesh7k/ai-mint'>Github</a>
+            <p>visit on</p><a style={{color: 'black'}} href='https://github.com/Durvesh7k/ai-mint'>Github</a>
         </div>
     </div>
   )
