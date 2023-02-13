@@ -42,16 +42,23 @@ In a separate terminal execute:
 ### 7. Start frontend
 `$ npm run start`
 
+
 ### 8. Deploying to mantle testnet
-## Update the hardhat.congig.js file
+
+Before deploying to mantle testnet you need some bit tokens so get it follow the [Guide](https://mirror.xyz/0xmantle.eth/qIDSO3AsFnXmwVLSYfODZWOpK_0K01UdvR3ZxUCtCjw)
+
+After getting some BIT tokens don't forget to import and bridge the tokens.
+
+#### Configure  the hardhat.config.js file
+
+```
 require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config();
 
 const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
 
-
 /** @type import('hardhat/config').HardhatUserConfig */
-`module.exports = {
+module.exports = {
   solidity: "0.8.17",
   networks: {
     "mantle-testnet": {
@@ -59,5 +66,6 @@ const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
       accounts: [PRIVATE_KEY] // Uses the private key from the .env file
     }
   }
-};`
+};
+```
 
