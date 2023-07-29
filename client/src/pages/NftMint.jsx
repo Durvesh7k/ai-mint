@@ -147,9 +147,17 @@ function NftMint({ white }) {
 
   //function to connect wallet
   const connectHandler = async () => {
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    const account = ethers.utils.getAddress(accounts[0])
-    setAccount(account);
+    try {
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const account = ethers.utils.getAddress(accounts[0])
+      setAccount(account);
+      if (!account) {
+        alert("Metamask not installed")
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
   }
 
 
@@ -167,14 +175,14 @@ function NftMint({ white }) {
 
   return (
     <div className={white ? `bg-white  flex justify-center font-joseph text-black` : `bg-black font-joseph flex justify-center text-white`}>
-      <div className='flex h-[45rem] md:h-max flex-col mt-10 mb-10'>
-        <div className='text-2xl w-[21rem] md:w-[25rem] font-semibold leading-10'>
+      <div className='flex h-[45rem] md:h-max  w-[18rem] md:w-[25rem] flex-col mt-10 mb-10'>
+        <div className='text-2xl  font-semibold leading-10'>
           <p>Bring your creativity here and turn it into nfts!</p>
         </div>
         <div
           className={white
-            ? `border-dotted border-2 border-black rounded-sm w-[21rem] md:w-[25rem] h-[21rem] md:h-[25rem]  mt-4`
-            : `border-dotted border-2  rounded-sm w-[21rem] md:w-[25rem] h-[21rem] md:h-[25rem]  mt-4`
+            ? `border-dotted border-2 border-black rounded-sm h-[18rem] md:h-[25rem]  mt-4`
+            : `border-dotted border-2  rounded-sm h-[18rem] md:h-[25rem]  mt-4`
           }>
           {!isWaiting && image ? (
             <img className='image_genrated' src={image} alt="AIimage" />
