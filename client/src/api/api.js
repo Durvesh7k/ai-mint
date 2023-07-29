@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const URL = 'http://localhost:8000'
+const URL = process.env.REACT_APP_API_URI
 
 
 const client = axios.create({
