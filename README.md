@@ -19,7 +19,7 @@ AI Mint is a web application that allows users to mint unique AI-generated image
 
 ## Setup Instructions
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/durvesh7k/ai-mint.git`
 2. Install dependencies: `npm install`
 3. Configure MongoDB: Update the MongoDB connection string in the `.env` file.
 4. Set up the Ethereum network: Install Hardhat and create a `.env` file with your Ethereum wallet private key and endpoint.
