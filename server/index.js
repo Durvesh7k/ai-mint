@@ -20,6 +20,11 @@ app.get("/:account", getRecords)
 
 app.listen(PORT, () => console.log(`Server is started at port  ${PORT}`))
 
-const URL = process.env.MONGODB_URI;
+const USERNAME = process.env.DB_USERNAME
+const PASSWORD = process.env.DB_PASSWORD
+
+
+const URL = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@blog-site.8uf78hu.mongodb.net/?retryWrites=true&w=majority`
 
 Connection(URL)
+
