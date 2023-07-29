@@ -36,9 +36,12 @@ The smart contract code can be found in the `contracts` directory. To compile an
 
 ## Screenshots
 
-![Screenshot 1](/screenshots/screenshot1.png)
-![Screenshot 2](/screenshots/screenshot2.png)
-![Screenshot 3](/screenshots/screenshot3.png)
+![aimint-img-1](https://github.com/Durvesh7k/ai-mint/assets/113430857/890cb98e-a42f-47c1-b2ab-dd67765cdac6)
+
+![aimint-img-2](https://github.com/Durvesh7k/ai-mint/assets/113430857/da12855a-6676-4169-9052-e42b011bc547)
+
+![aimint-img-3](https://github.com/Durvesh7k/ai-mint/assets/113430857/c8a8207b-1e36-452a-8e9e-4176e010bee3)
+
 
 ## License
 
