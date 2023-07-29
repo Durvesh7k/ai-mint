@@ -11,7 +11,7 @@ const History = ({ white }) => {
   const [records, setRecords] = useState([]);
 
   useEffect(() => {
-    const fetchData = async() => {
+    const fetchData = async () => {
       const response = await getRecord(account)
       setRecords(response)
     }
@@ -21,7 +21,9 @@ const History = ({ white }) => {
   }, [])
 
   return (
-    <div className={white ? `bg-white text-black h-screen font-joseph` : `bg-black text-white h-screen font-joseph`}>
+    <div className={records.length > 4
+      ? (white ? `bg-white text-black h-max   font-joseph` : `bg-black h-max text-white font-joseph`)
+      : (white ? `bg-white text-black h-screen  font-joseph` : `bg-black h-screen text-white font-joseph`)}>
       <div className='flex justify-center'>
         <div className='flex flex-col mt-6 mb-8 gap-4'>
           {records && records.map((record) => {

@@ -11,7 +11,7 @@ const App = () => {
   const [white, setWhite] = useState(false);
 
   return (
-    <div>
+    <div >
       <DataContextProvider>
         <Navigation white={white} setWhite={setWhite} />
 
