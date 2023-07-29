@@ -151,11 +151,11 @@ function NftMint({ white }) {
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
       const account = ethers.utils.getAddress(accounts[0])
       setAccount(account);
-      if (!account) {
-        alert("Metamask not installed")
-      }
+  
     } catch (error) {
       console.log(error);
+      alert("Metamask not installed")
+
     }
 
   }
